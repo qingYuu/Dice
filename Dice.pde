@@ -3,8 +3,11 @@ void setup()
 	noLoop();
 }
 void draw()
-{
-	//your code here
+{ 
+
+	Die mattsun = new Die(40,40);
+	mattsun.show();
+    
 }
 void mousePressed()
 {
@@ -12,17 +15,26 @@ void mousePressed()
 }
 class Die //models one single dice cube
 {
-	//variable declarations here
-	Die(int x, int y) //constructor
+	int mX, mY, mRandom;
+	Die(int x, int y) 
 	{
-		//variable initializations here
+		mX = x;
+		mY = y;
+		mRandom = (int)(Math.random()*7);
 	}
 	void roll()
 	{
-		//your code here
+		mRandom = (int)(Math.random()*7);
 	}
 	void show()
-	{
-		//your code here
+	{  
+        fill(247, 59, 59);
+		rect(mX-20, mY-20, 30, 30,5);
+		if(mRandom == 1)
+		{
+			fill(255, 255, 255);
+			ellipse(mX-5,mY-5,10,10);
+		}
+
 	}
 }
