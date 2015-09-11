@@ -21,9 +21,9 @@ public void setup()
 }
 public void draw()
 { 
-for(int i = 50; i<=400; i=i+50)
+for(int i = 50; i<=355; i=i+50)
 {
-	for(int k =50; k<=400; k=k+50)
+	for(int k =50; k<=355; k=k+50)
 	{
 	Die mattsun = new Die(i,k);
 	mattsun.show();
