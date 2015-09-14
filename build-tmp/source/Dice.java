@@ -20,17 +20,23 @@ public void setup()
 	noLoop();
 }
 public void draw()
-{ 
-for(int i = 50; i<=355; i=i+50)
-{
-	for(int k =50; k<=355; k=k+50)
+{  background(255, 255, 255);
+	int sum=0;
+	for(int i = 50; i<=355; i=i+50)
 	{
-	Die mattsun = new Die(i,k);
-	mattsun.show();
+		for(int k =50; k<=355; k=k+50)
+		{
+			Die mattsun = new Die(i,k);
+			mattsun.show();
+			sum =sum+ mattsun.mRandom;
+		    
+		}
 	}
-	
-	}
+	fill(0,0,0);
+	textSize(30);
+	text("Total dots" + sum, 200,400);
 }
+
 public void mousePressed()
 {
 	redraw();
